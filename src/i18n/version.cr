@@ -1,3 +1,3 @@
-module I18n
+class I18n
   VERSION = "0.1.0"
 end
