@@ -4,7 +4,6 @@ require "yaml"
 class I18n
   @@load_path = "./"
   @@file = ""
-  @@loaded = false
 
   def self.load_path=(path)
     @@load_path = path
@@ -12,20 +11,15 @@ class I18n
 
   def self.locale=(label)
     @@file = "#{label}.yml"
-    @@loaded = false
+    load_file
   end
 
   def self.load_file
-    unless @@loaded
-      path = File.join([@@load_path, @@file])
-      @@backend = YAML.parse(File.read(path))
-      @@loaded = true
-    end
+    path = File.join([@@load_path, @@file])
+    @@backend = YAML.parse(File.read(path))
   end
 
   def self.translate(key)
-    load_file unless @@loaded
-
     temp = @@backend.not_nil!
     key.split('.').each do |k|
       temp = temp[k]
