@@ -1,6 +1,7 @@
-# i18n
+# I18n.cr
 
-TODO: Write a description here
+Crystal internationalization (i18n) solution.
+
 
 ## Installation
 
@@ -10,7 +11,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   i18n:
-    github: [your-github-name]/i18n
+    github: hugoabonizio/i18n.cr
 ```
 
 
@@ -19,18 +20,17 @@ dependencies:
 
 ```crystal
 require "i18n"
+
+# Loads ./pt-BR.yml
+I18n.locale = :"pt-BR"
+puts I18n.translate "hello"
+# "olá"
 ```
 
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
-
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/i18n/fork )
+1. Fork it ( https://github.com/hugoabonizio/i18n/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -38,4 +38,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Hugo Abonizio - creator, maintainer
+- [hugoabonizio](https://github.com/hugoabonizio) Hugo Abonizio - creator, maintainer
