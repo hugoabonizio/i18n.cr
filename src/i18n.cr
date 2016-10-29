@@ -19,6 +19,7 @@ class I18n
     unless @@loaded
       path = File.join([@@load_path, @@file])
       @@backend = YAML.parse(File.read(path))
+      @@loaded = true
     end
   end
 
