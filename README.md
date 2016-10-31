@@ -23,7 +23,7 @@ require "i18n"
 
 # Loads ./pt-BR.yml
 I18n.locale = :"pt-BR"
-puts I18n.translate "hello"
+puts I18n.t "hello"
 # "olá"
 ```
 

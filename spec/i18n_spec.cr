@@ -15,11 +15,11 @@ describe I18n do
 
   it "should load portuguese simple case" do
     I18n.locale = :"pt-BR"
-    I18n.translate("hello").should eq("oi")
+    I18n.t("hello").should eq("oi")
   end
 
   it "should load portuguese nested case" do
     I18n.locale = :"pt-BR"
-    I18n.translate("home.message").should eq("olá, mundo!")
+    I18n.t("home.message").should eq("olá, mundo!")
   end
 end

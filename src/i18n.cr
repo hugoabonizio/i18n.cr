@@ -26,4 +26,8 @@ class I18n
     end
     temp
   end
+
+  def self.t(key)
+    translate(key)
+  end
 end
